@@ -10,8 +10,8 @@ int main (){
         cin>>a>>b>>c;
 
         int sum =a+b+c;
-        if(sum <=2){
-            count=count+1;
+        if(sum >=2){
+            count++;
         }
     }
     cout<<count<<endl;
