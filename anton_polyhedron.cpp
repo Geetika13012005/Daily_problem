@@ -12,7 +12,7 @@ int main (){
      if(s=="Tetrahedron"){
         totalcount+=4;
      }
-     else if(s=="cube"){
+     else if(s=="Cube"){
         totalcount+=6;
      }
      else if(s=="Octahedron"){
