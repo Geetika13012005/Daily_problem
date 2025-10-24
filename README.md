@@ -14,4 +14,3 @@ stones, Vanya and fences, Soldiers ,Limax bear and bob bear , word , Tram , Juan
 
 day 1 - leetcode problem
 
-day 2 - leetcode problem
