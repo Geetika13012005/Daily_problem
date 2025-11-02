@@ -1,21 +1,31 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
+bool isLucky(long long n) {
+    if (n == 0) return false;
+    while (n > 0) {
+        int d = n % 10;
+        if (d != 4 && d != 7)
+            return false;
+        n /= 10;
+    }
+    return true;
+}
+
 int main() {
-    int n;
+    string n;
     cin >> n;
 
-    // Predefined lucky numbers ≤ 1000
-    int lucky[] = {4, 7, 44, 47, 74, 77, 444, 447, 474, 477, 744, 747, 774, 777};
-    int len = sizeof(lucky) / sizeof(lucky[0]);
+    int count = 0;
+    for (char c : n)
+        if (c == '4' || c == '7')
+            count++;
 
-    for (int i = 0; i < len; i++) {
-        if (n % lucky[i] == 0) {
-            cout << "YES" << endl;
-            return 0;
-        }
-    }
+    if (isLucky(count))
+        cout << "YES";
+    else
+        cout << "NO";
 
-    cout << "NO" << endl;
     return 0;
 }
