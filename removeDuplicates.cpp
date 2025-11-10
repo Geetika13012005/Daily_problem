@@ -1,39 +1,30 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
     int n;
-    cout << "Enter number of elements: ";
     cin >> n;
-
     vector<int> nums(n);
-    cout << "Enter " << n << " sorted elements: ";
-    for (int i = 0; i < n; i++) {
+
+    for (int i = 0; i < n; i++)
         cin >> nums[i];
-    }
 
-    if (nums.empty()) {
-        cout << "Array is empty!" << endl;
-        return 0;
-    }
+    unordered_set<int> seen;
+    vector<int> result;
 
-    int j = 0; 
-    for (int i = 1; i < n; i++) {  
-        if (nums[i] != nums[j]) {  
-            j++;
-            nums[j] = nums[i];     
+    // Traverse from right to left
+    for (int i = n - 1; i >= 0; i--) {
+        if (seen.find(nums[i]) == seen.end()) {
+            seen.insert(nums[i]);
+            result.push_back(nums[i]);
         }
     }
 
-    int k = j + 1;
+    reverse(result.begin(), result.end());
 
-    cout << "\nNumber of unique elements: " << k << endl;
-    cout << "Array after removing duplicates: ";
-    for (int i = 0; i < k; i++) {
-        cout << nums[i] << " ";
-    }
-    cout << endl;
+    cout << result.size() << "\n";
+    for (int x : result) cout << x << " ";
+    cout << "\n";
 
     return 0;
 }
