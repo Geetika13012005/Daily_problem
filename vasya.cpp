@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,30 +8,26 @@ int main() {
     int t;
     cin >> t;
 
-    while (t--) 
+    while (t--) {   
         long long R0, X;
         int D, n;
         cin >> R0 >> X >> D >> n;
 
         string s;
-        cin >> s;   
+        cin >> s;
 
         long long R = R0;
         int ans = 0;
 
         for (char c : s) {
             if (c == '1') {
-                
                 ans++;
                 R = max(0LL, R - D);
-            } 
-            else {  
-             
+            } else {
                 if (R < X) {
                     ans++;
                     R = max(0LL, R - D);
                 }
-                
             }
         }
 
