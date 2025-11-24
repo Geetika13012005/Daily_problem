@@ -71,6 +71,8 @@ Day-33 Khab,
 
 Day-34 longestSubstring ,
 
+Day-35 MEX,
+
 Day-35 bill,
 
 Day-36 Lottery ,
