@@ -73,6 +73,7 @@ Day-34 longestSubstring ,
 
 Day-35 MEX,
 
+Day-36 pizzaTime,
 Day-35 bill,
 
 Day-36 Lottery ,
