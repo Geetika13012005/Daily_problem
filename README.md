@@ -1,7 +1,6 @@
 ## Codeforces Journey
 Day-1 stones,
 
-
 Day-2 Vanya and fences,
 
 Day-3 Soldiers ,
