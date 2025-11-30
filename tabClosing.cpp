@@ -11,10 +11,13 @@ int main() {
         long long a, b, n;
         cin >> a >> b >> n;
 
-        long long k = a / b;         
-        long long ans = (n + k - 1) / k;  
+        long long k = a / b;     // Maximum tabs that can have length b
 
-        cout << ans << "\n";
+        if (a == b || n <= k) {
+            cout << 1 << "\n";   // Only one move needed
+        } else {
+            cout << 2 << "\n";   // Two moves needed
+        }
     }
     return 0;
 }
