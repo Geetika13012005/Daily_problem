@@ -86,6 +86,8 @@ Day-37 art_contest,
 
 Day-38 souvlaki,
 
+Day-39 pacerTest,
+
 Day-39 expansionTab,
 
 Day-39 sequneceGame,
