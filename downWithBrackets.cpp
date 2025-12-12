@@ -10,23 +10,19 @@ int main() {
     while (t--) {
         string s;
         cin >> s;
+        int bal = 0, n = s.size();
+        bool multi = false;
 
-        int n = s.size();
-
-        int i = 0;
-        while (i < n && s[i] == '(') i++;
-        bool monotonic = true;
-        for (int j = i; j < n; j++) {
-            if (s[j] != ')') {
-                monotonic = false;
+        for (int i = 0; i < n; i++) {
+            bal += (s[i] == '(' ? 1 : -1);
+            if (bal == 0 && i != n - 1) {
+                multi = true;   
                 break;
             }
         }
 
-        if (monotonic) 
-            cout << "NO\n"; 
-        else 
-            cout << "YES\n"; 
+        if (multi) cout << "YES\n";
+        else cout << "NO\n";
     }
     return 0;
 }
