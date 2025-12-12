@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        string s;
+        cin >> s;
+
+        int n = s.size();
+
+        int i = 0;
+        while (i < n && s[i] == '(') i++;
+        bool monotonic = true;
+        for (int j = i; j < n; j++) {
+            if (s[j] != ')') {
+                monotonic = false;
+                break;
+            }
+        }
+
+        if (monotonic) 
+            cout << "NO\n"; 
+        else 
+            cout << "YES\n"; 
+    }
+    return 0;
+}
