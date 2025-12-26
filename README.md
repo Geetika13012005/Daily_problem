@@ -123,3 +123,5 @@ Day-50 foot,
 Day-51 stringTheory,
 
 Day-52 brr brr patapim,
+
+Day-53 Laser,
