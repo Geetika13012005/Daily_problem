@@ -11,7 +11,7 @@ int main() {
         long long n, m, x, y;
         cin >> n >> m >> x >> y;
 
-        // laser positions are irrelevant for the answer
+       
         for (int i = 0; i < n; i++) {
             long long a;
             cin >> a;
