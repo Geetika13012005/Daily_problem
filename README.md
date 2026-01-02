@@ -137,3 +137,5 @@ Day-56 Ashmal,
 Day-57 carnivalWheel,
 
 Day-58 maximunneighbourhood,
+
+Day-59 steppingClass,
