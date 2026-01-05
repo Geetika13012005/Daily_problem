@@ -143,3 +143,5 @@ Day-59 steppingClass,
 Day-60 suspension,
 
 Day-61 dungeonEquillibrium,
+
+Day-62 bitwiseReverse,
