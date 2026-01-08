@@ -151,3 +151,5 @@ Day-63 reversePolish,
 Day-64 theApple,
 
 Day-65 twoNumber,
+
+Day-66 increaseAndSmash,
