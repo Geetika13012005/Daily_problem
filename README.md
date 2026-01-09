@@ -153,3 +153,5 @@ Day-64 theApple,
 Day-65 twoNumber,
 
 Day-66 increaseAndSmash,
+
+Day-67 unconventionalPairs,
