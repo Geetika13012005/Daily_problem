@@ -161,3 +161,5 @@ Day-68 incrementalSubarray,
 Day-69 sublimeSequence,
 
 Day-70 shortestIncreasingPath,
+
+Day-71 gameOfMatheles,
