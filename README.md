@@ -164,3 +164,5 @@ Day-70 shortestIncreasingPath,
 Day-71 gameOfMatheles,
 
 Day-72 permutation,
+
+Day-73 replaceCharacter,
