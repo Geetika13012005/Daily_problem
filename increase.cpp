@@ -20,7 +20,7 @@ int main() {
                 s.insert(x);
         }
 
-        int k = s.size();   // number of distinct positive values
+        int k = s.size();   
 
         if (k == 0)
             cout << 0 << "\n";
