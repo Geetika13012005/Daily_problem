@@ -166,3 +166,5 @@ Day-71 gameOfMatheles,
 Day-72 permutation,
 
 Day-73 replaceCharacter,
+
+Day-74 marbleGame,
