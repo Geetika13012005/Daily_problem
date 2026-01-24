@@ -168,3 +168,5 @@ Day-72 permutation,
 Day-73 replaceCharacter,
 
 Day-74 marbleGame,
+
+Day-75 everyoneLoveTres,
