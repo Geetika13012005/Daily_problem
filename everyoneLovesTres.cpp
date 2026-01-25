@@ -11,15 +11,15 @@ int main() {
         int n;
         cin >> n;
 
-        if (n % 2 == 1) {
+        if (n == 1 || n == 3) {
             cout << -1 << '\n';
-            continue;
         }
-
-        // (n/2 - 1) times "33", then "66"
-        for (int i = 0; i < n / 2 - 1; i++)
-            cout << "33";
-        cout << "66\n";
+        else if (n % 2 == 0) {
+            cout << string(n - 2, '3') << "66\n";
+        }
+        else {
+            cout << string(n - 5, '3') << "36366\n";
+        }
     }
     return 0;
 }
