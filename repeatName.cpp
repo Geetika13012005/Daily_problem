@@ -12,7 +12,6 @@ int main(){
     }
 
     
-
     unordered_map<string, int> mp;
     vector<string> result;
 
