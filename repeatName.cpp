@@ -7,9 +7,11 @@ int main(){
 
     vector<string> input(n);
     for(int i = 0; i < n; i++){
-        
+
         cin >> input[i];
     }
+
+    
 
     unordered_map<string, int> mp;
     vector<string> result;
