@@ -174,3 +174,5 @@ Day-75 everyoneLoveTres,
 Day-76 water,
 
 Day-77 lenghtSubtraction,
+
+Day-78 arrayColoring,
