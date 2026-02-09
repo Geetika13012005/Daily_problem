@@ -178,3 +178,5 @@ Day-77 lenghtSubtraction,
 Day-78 arrayColoring,
 
 Day-79 newYrString,
+
+Day-80 reversePermutatio,
