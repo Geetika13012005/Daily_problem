@@ -1,35 +1,45 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+bool can(vector<long long>& a, long long x){
+    int n = a.size();
+    int need = (n + 1) / 2 - 1;
+    int forced = 0, flex = 0;
 
-    int t;
+    for(int i = 1; i < n; i++){
+        long long v = llabs(a[i]);
+
+        bool c1 = (-v < x); 
+        bool c2 = (v < x);  
+
+        if(c1 && c2) forced++;
+        else if(!c1 && !c2) {
+
+        }
+        else flex++;
+    }
+
+    return (forced <= need && need <= forced + flex);
+}
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t; 
     cin >> t;
-    while (t--) {
+    while(t--){
         int n;
         cin >> n;
-        vector<int> a(n);
-        for (int i = 0; i < n; i++) cin >> a[i];
+        vector<long long> a(n);
+        for(auto &x: a) cin >> x;
 
-        int a1_abs = abs(a[0]);
-        int less = 0, greater = 0;
+        long long x1 = a[0];
+        long long x2 = -a[0];
 
-        for (int i = 1; i < n; i++) {
-            if (abs(a[i]) < a1_abs) less++;
-            if (abs(a[i]) > a1_abs) greater++;
-        }
-
-        int median_pos = (n + 1) / 2; // 1-based median position
-
-        // Correct condition:
-        if (less <= median_pos - 1 && greater <= n - median_pos) {
+        if(can(a, x1) || can(a, x2))
             cout << "YES\n";
-        } else {
+        else
             cout << "NO\n";
-        }
     }
-    return 0;
 }
