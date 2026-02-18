@@ -186,3 +186,5 @@ Day-81 timeline,
 Day-82 impose,
 
 Day-83 Anagram,
+
+Day-84 pickyCat,
