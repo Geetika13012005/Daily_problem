@@ -1,21 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main(){
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    cin.tie(NULL);
 
     int t;
     cin >> t;
-    while (t--) {
-        string n;
-        cin >> n;
+    while(t--){
+        string s;
+        cin >> s;
 
-        if (n.size() == 1) {
-            cout << 0 << '\n';
-        } else {
-            cout << n.size() - 1 << '\n';
+        int zeros = 0;
+        int best = 0;
+
+        for(char c : s){
+            if(c == '0'){
+                zeros++;
+            } else {
+                best = max(best, zeros + 1);
+            }
         }
+
+        cout << s.size() - best << "\n";
     }
-    return 0;
 }
