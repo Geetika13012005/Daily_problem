@@ -190,3 +190,7 @@ Day-83 Anagram,
 Day-84 pickyCat,
 
 Day-85 missingNumber,
+
+Day-86 missingIndexArr,
+
+Day-87 expensiveNumber.cpp,
