@@ -196,3 +196,5 @@ Day-86 missingIndexArr,
 Day-87 expensiveNumber.cpp,
 
 Day-88 homework.cpp,
+
+Day-89 perfectSquare,
