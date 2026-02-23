@@ -198,3 +198,5 @@ Day-87 expensiveNumber.cpp,
 Day-88 homework.cpp,
 
 Day-89 perfectSquare,
+
+Day-90 equalOccuRANCE.cpp,
