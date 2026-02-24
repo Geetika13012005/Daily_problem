@@ -5,6 +5,8 @@ int main(){
     int t;
     cin >> t;
 
+    vector<string> results;
+
     while(t--){
         int n;
         cin >> n;
@@ -20,11 +22,14 @@ int main(){
 
         for(int i = 0; i < m; i++){
             if(c[i] == 'V')
-                a = b[i] + a;   // add to front
+                a = b[i] + a;
             else
-                a = a + b[i];   // add to end
+                a = a + b[i];
         }
 
-        cout << a << endl;
+        results.push_back(a);   // store result
     }
+
+    for(string s : results)  // print all
+        cout << s << endl;
 }
