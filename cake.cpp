@@ -1,42 +1,36 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-using ll = long long;
 
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+int main() {
 
-    int t; 
+    int t;
     cin >> t;
-    while(t--){
-        int n;
-        ll m;
+
+    while(t--) {
+
+        long long n, m;
         cin >> n >> m;
 
-        vector<ll>a(n);
-        for(int i=0;i<n;i++) cin>>a[i];
+        long long a[100005];
 
-        priority_queue<pair<ll,pair<ll,ll>>> pq;
-
-        for(int i=0;i<n;i++)
-            pq.push({a[i]*m,{a[i],m}});
-
-        ll ans=0;
-
-        for(int step=0; step<m; step++){
-            auto top=pq.top();
-            pq.pop();
-
-            ll val=top.first;
-            ll a=top.second.first;
-            ll k=top.second.second;
-
-            ans+=val;
-
-            if(k>1)
-                pq.push({a*(k-1),{a,k-1}});
+        for(int i = 0; i < n; i++) {
+            cin >> a[i];
         }
 
-        cout<<ans<<"\n";
+        // Sort in decreasing order
+        sort(a, a + n, greater<long long>());
+
+        long long answer = 0;
+
+        long long limit = min(n, m);
+
+        for(int i = 0; i < limit; i++) {
+            answer += a[i] * (m - i);
+        }
+
+        cout << answer << endl;
     }
+
+    return 0;
 }
