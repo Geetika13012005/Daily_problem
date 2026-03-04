@@ -209,3 +209,5 @@ Day-92 newYearString.cpp,
 Day-93 sort,
 
 Day-94 cake.cpp,
+
+Day-95 conjector.cpp,
