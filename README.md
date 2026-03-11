@@ -215,3 +215,5 @@ Day-95 conjector.cpp,
 Day-96 Dungoen.cpp,
 
 Day-97 alternatingSeries.cpp,
+
+Day-98 Dream.cpp,
