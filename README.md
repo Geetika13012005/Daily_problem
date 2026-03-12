@@ -217,3 +217,5 @@ Day-96 Dungoen.cpp,
 Day-97 alternatingSeries.cpp,
 
 Day-98 Dream.cpp,
+
+Day-99 redStone.cpp,
