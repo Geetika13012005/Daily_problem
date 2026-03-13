@@ -219,3 +219,5 @@ Day-97 alternatingSeries.cpp,
 Day-98 Dream.cpp,
 
 Day-99 redStone.cpp,
+
+Day-100 lever.cpp,
