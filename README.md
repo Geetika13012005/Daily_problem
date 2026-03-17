@@ -222,3 +222,5 @@ Day-99 redStone.cpp,
 Day-100 lever.cpp,
 
 Day101 tcs2.cpp,
+
+Day-102 MEX.cpp,
