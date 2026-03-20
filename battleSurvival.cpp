@@ -26,6 +26,6 @@ int main() {
             long long maxVal = a[n-1];
             long long minVal = a[0];
             cout << maxVal - (sum - maxVal - minVal) << "\n";
-        }
+        }tran
     }
 }
