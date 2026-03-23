@@ -9,6 +9,7 @@ int main(){
 
         cin >> input[i];
     }
+    
     unordered_map<string, int> mp;
     vector<string> result;
 
