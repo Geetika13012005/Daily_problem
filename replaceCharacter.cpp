@@ -44,7 +44,6 @@ int main() {
                 minChar = c;
             }
         }
-
         for (int i = 0; i < n; i++) {
             if (s[i] == minChar) {
                 s[i] = maxChar;
