@@ -1,4 +1,3 @@
-
 ## Codeforces Journey
 
 Day-1 stones,
