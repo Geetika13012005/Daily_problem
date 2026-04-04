@@ -17,6 +17,7 @@ int main() {
 
         if (n == 2) {
             cout << a[1] - a[0] << "\n";
+           
             continue;
         }
 
@@ -33,5 +34,5 @@ int main() {
     }
     return 0;
 
-    
+
 }
