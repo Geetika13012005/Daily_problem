@@ -16,7 +16,6 @@ int main() {
         for (auto &x : a) cin >> x;
 
         if (n == 2) {
-
             cout << a[1] - a[0] << "\n";
             continue;
         }
