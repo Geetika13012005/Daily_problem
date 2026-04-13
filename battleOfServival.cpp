@@ -18,6 +18,7 @@ int main() {
             cout << a[1] - a[0] << "\n";
             continue;
         }
+        
         sort(a.begin(), a.end());
         long long sum = 0;
         for (int i = 0; i < n-2; i++) {
