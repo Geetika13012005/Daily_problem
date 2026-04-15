@@ -11,7 +11,6 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-
         vector<long long> a(n);
         for (auto &x : a) cin >> x;
         if (n == 2) {
