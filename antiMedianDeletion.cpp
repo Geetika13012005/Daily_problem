@@ -30,7 +30,6 @@ int main(){
             int ans = 1 + 2 * k;
 
             if(L == R) ans--;   
-
             ans = max(ans, 2);
 
             cout << ans << " ";
