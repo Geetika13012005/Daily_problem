@@ -19,7 +19,6 @@ int main(){
             cout << 1 << "\n";
             continue;
         }
-
         for(int i = 0; i < n; i++){
             cout << 2 << " ";
         }
