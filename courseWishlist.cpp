@@ -2,7 +2,6 @@
 using namespace std;
 
 int n, k;
-
 vector<int> a;          
 vector<int> b;          
 vector<int> cnt;   
