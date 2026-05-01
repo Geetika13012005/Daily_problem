@@ -7,7 +7,6 @@ vector<int> b;
 vector<int> cnt;   
 vector<int> ops;        
 bool makeSpace(int lvl) {
-
     if (lvl == k + 1)
         return true;
 
