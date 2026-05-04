@@ -11,6 +11,7 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
+        
         map<int, int> freq;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
