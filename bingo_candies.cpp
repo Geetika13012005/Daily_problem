@@ -23,7 +23,6 @@ int main() {
         }
 
         bool possible = true;
-     
         for (auto &p : freq) {
             if (p.second > n * (n - 1)) {
                 possible = false;
