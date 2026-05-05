@@ -23,8 +23,7 @@ int main() {
         }
 
         bool possible = true;
-        // If any color appears more than n*(n-1),
-        // then one full row/column of same color is unavoidable
+     
         for (auto &p : freq) {
             if (p.second > n * (n - 1)) {
                 possible = false;
