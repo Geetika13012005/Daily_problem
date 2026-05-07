@@ -32,7 +32,6 @@ int main() {
                 break;
             }
         }
-
         cout << (possible ? "YES" : "NO") << '\n';
     }
     return 0;
