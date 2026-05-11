@@ -4,7 +4,6 @@ using namespace std;
 bool between(int x, int l, int r) {
     return x > l && x < r;
 }
-
 int main() {
     int t;
     cin >> t;
