@@ -11,9 +11,7 @@ int main() {
     while (t--) {
         int a, b, c, d;
         cin >> a >> b >> c >> d;
-
-        
-        if (a > b) swap(a, b);
+ if (a > b) swap(a, b);
 
       
         bool cInside = between(c, a, b);
