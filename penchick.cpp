@@ -3,32 +3,31 @@ using namespace std;
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
     int t;
-    cin >> t;  
+    cin >> t;
 
-    while (t--) {
+    while(t--) {
         int n;
-        cin >> n;  
+        cin >> n;
 
-        vector<int> p(n + 1), pos(n + 1);
+        vector<int> p(n);
 
-          for (int i = 1; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
             cin >> p[i];
-            pos[p[i]] = i;
         }
 
-        bool possible = true;
+        bool ok = true;
 
-        for (int i = 1; i < n; i++) {
-            if (pos[i + 1] < pos[i]) {
-                possible = false;
+        for(int i = 0; i < n; i++) {
+            if(abs(p[i] - (i + 1)) > 1) {
+                ok = false;
                 break;
             }
         }
 
-        cout << (possible ? "YES\n" : "NO\n");
+        cout << (ok ? "YES" : "NO") << '\n';
     }
 
     return 0;
