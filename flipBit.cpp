@@ -37,7 +37,6 @@ int main() {
                 L++;
             prev = b[i];
         }
-
         int R = 0;
 
         // virtual b[n] = 0
