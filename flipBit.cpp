@@ -38,7 +38,6 @@ int main() {
             prev = b[i];
         }
         int R = 0;
-
         // virtual b[n] = 0
         prev = 0;
         for (int i = n - 1; i >= p; i--) {
