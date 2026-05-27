@@ -1,22 +1,31 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
     int t;
     cin >> t;
 
-    while (t--) {
+    vector<int> answers;
+
+
+    for (int i = 0; i < t; i++) {
         int n, k;
         cin >> n >> k;
 
-        // Minimum operations
-        int ans = (n - 2) / (k - 1) + 1;
+        int ans;
 
-        // Special case when n = 1
         if (n == 1)
             ans = 0;
+        else
+            ans = (n - 2) / (k - 1) + 1;
 
-        cout << ans << endl;
+        answers.push_back(ans);
+    }
+
+    
+    for (int x : answers) {
+        cout << x << endl;
     }
 
     return 0;
