@@ -49,6 +49,5 @@ int main() {
         }
         cout << max(L, R) << '\n';
     }
-
     return 0;
 }
