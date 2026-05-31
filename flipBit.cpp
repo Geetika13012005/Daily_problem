@@ -47,7 +47,6 @@ int main() {
                 R++;
             prev = b[i];
         }
-
         cout << max(L, R) << '\n';
     }
 
