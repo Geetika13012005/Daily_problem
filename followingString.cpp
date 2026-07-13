@@ -17,7 +17,6 @@ int main() {
 
         vector<int> cnt(26, 0);
         string ans = "";
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 26; j++) {
                 if (cnt[j] == a[i]) {
