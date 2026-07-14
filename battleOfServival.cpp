@@ -1,30 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+using int64 = long long;
+
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t;
-    cin >> t;
-    while (t--) {
+    cin.tie(nullptr);
+
+    int T;
+    cin >> T;
+
+    while (T--) {
         int n;
         cin >> n;
-        vector<long long> a(n);
-        for (auto &x : a) cin >> x;
-        if (n == 2) {
-            cout << a[1] - a[0] << "\n";
-            continue;
-        }
-        sort(a.begin(), a.end());
-        long long sum = 0;
-        for (int i = 0; i < n-2; i++) {
-            sum += a[i];
+
+        vector<int64> a(n + 1), dp(n + 1);
+
+        for (int i = 1; i <= n; i++)
+            cin >> a[i];
+
+        dp[1] = a[1];
+
+        for (int i = 2; i < n; i++) {
+            dp[i] = min(a[i], a[i] - dp[i - 1]);
         }
 
-        long long ans = a[n-1] + sum - a[n-2];
-
-        cout << ans << "\n";
+        cout << a[n] - dp[n - 1] << '\n';
     }
+
     return 0;
-
-
 }
