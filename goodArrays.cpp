@@ -12,14 +12,17 @@ int main() {
         int n;
         cin >> n;
 
-        long long capacity = 0;
+        long long sum = 0;
+        int cnt1 = 0;
+
         for (int i = 0; i < n; i++) {
             long long x;
             cin >> x;
-            capacity += (x - 1);
+            sum += x;
+            if (x == 1) cnt1++;
         }
 
-        if (capacity >= (n + 1) / 2)
+        if (n > 1 && sum >= n + cnt1)
             cout << "YES\n";
         else
             cout << "NO\n";
