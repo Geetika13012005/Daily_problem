@@ -2,7 +2,6 @@
 using namespace std;
 
 using int64 = long long;
-using i128 = __int128_t;
 
 const int64 LIM = 1000000000000000000LL;
 
@@ -20,15 +19,18 @@ int main() {
         int ans = 1;
 
         for (int l = 1; l <= 2500; l++) {
-            i128 curLcm = 1;
+            int64 curLcm = 1;
 
             for (int r = l; r <= l + 42; r++) {
-                int64 g = std::gcd((int64)curLcm, (int64)r);
-                curLcm = curLcm / g * r;
+                int64 g = gcd(curLcm, (int64)r);
 
-                if (curLcm > LIM) break;
+                // Prevent overflow
+                if (curLcm / g > LIM / r)
+                    break;
 
-                if (n % (int64)curLcm == 0)
+                curLcm = (curLcm / g) * r;
+
+                if (n % curLcm == 0)
                     ans = max(ans, r - l + 1);
             }
         }
