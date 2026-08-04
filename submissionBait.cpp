@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -14,25 +12,23 @@ int main() {
         int n;
         cin >> n;
 
-        vector<int> a(n);
+        vector<int> freq(n + 1, 0);
 
         for (int i = 0; i < n; i++) {
-            cin >> a[i];
+            int x;
+            cin >> x;
+            freq[x]++;
         }
 
-        sort(a.begin(), a.end());
-
-        int moves = 1; 
-        for (int i = 1; i < n; i++) {
-            if (a[i] != a[i - 1]) {
-                moves++;
+        bool ok = false;
+        for (int i = 1; i <= n; i++) {
+            if (freq[i] & 1) {
+                ok = true;
+                break;
             }
         }
 
-        if (moves % 2 == 1)
-            cout << "YES\n";
-        else
-            cout << "NO\n";
+        cout << (ok ? "YES" : "NO") << '\n';
     }
 
     return 0;
