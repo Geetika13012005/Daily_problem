@@ -16,27 +16,23 @@ int main() {
         int64 n;
         cin >> n;
 
+        int64 lcm = 1;
         int ans = 1;
 
-        for (int l = 1; l <= 2500; l++) {
-            int64 curLcm = 1;
+        for (int i = 2; ; i++) {
+            int64 g = gcd(lcm, (int64)i);
 
-            for (int r = l; r <= l + 42; r++) {
-                int64 g = gcd(curLcm, (int64)r);
+            if (lcm / g > LIM / i)
+                break;
 
-                // Prevent overflow
-                if (curLcm / g > LIM / r)
-                    break;
+            lcm = (lcm / g) * i;
 
-                curLcm = (curLcm / g) * r;
-
-                if (n % curLcm == 0)
-                    ans = max(ans, r - l + 1);
-            }
+            if (n % lcm == 0)
+                ans = i;
+            else
+                break;
         }
 
-        cout << ans << '\n';
+        cout << ans << "\n";
     }
-
-    return 0;
 }
