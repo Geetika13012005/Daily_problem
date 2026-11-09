@@ -20,37 +20,48 @@ int main() {
 
         sort(a.begin(), a.end(), greater<int>());
 
-        vector<int> ans;
-        vector<int> extra;
-
-        set<int> seen;
+        map<int, int, greater<int>> freq;
 
         for (int i = 0; i < n; i++) {
-
-            if (seen.count(a[i]) == 0) {
-                ans.push_back(a[i]);
-                seen.insert(a[i]);
-            }
-            else {
-                extra.push_back(a[i]);
-            }
+            freq[a[i]]++;
         }
 
-        for (int i = 0; i < extra.size(); i++) {
-            ans.push_back(extra[i]);
+        vector<int> ans;
+
+        // First add all distinct numbers
+        for (auto p : freq) {
+            ans.push_back(p.first);
+        }
+
+        // Find maximum frequency
+        int mx = 0;
+
+        for (auto p : freq) {
+            mx = max(mx, p.second);
+        }
+
+        // Add duplicates round by round
+        for (int round = 2; round <= mx; round++) {
+
+            for (auto p : freq) {
+
+                if (p.second >= round) {
+                    ans.push_back(p.first);
+                }
+            }
         }
 
         results.push_back(ans);
     }
 
-    // Print all outputs after taking all inputs
+    // Print all outputs together
     for (int i = 0; i < results.size(); i++) {
 
         for (int j = 0; j < results[i].size(); j++) {
             cout << results[i][j] << " ";
         }
 
-        cout << endl;
+        cout << "\n";
     }
 
     return 0;
